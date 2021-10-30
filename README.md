@@ -1,1 +1,1 @@
-# univirsityApp
+# University App
