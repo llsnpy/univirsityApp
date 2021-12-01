@@ -17,7 +17,7 @@ import java.util.stream.Collectors;
 public class StudentEntity implements Serializable {
 
     @Id
-    @GeneratedValue(generator = "generator0")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column
@@ -28,7 +28,7 @@ public class StudentEntity implements Serializable {
 
     @Setter(AccessLevel.PRIVATE)
     @ManyToMany(cascade = {CascadeType.ALL})
-    @JoinTable(name = "students_books",
+    @JoinTable(name = "students_lectures",
     joinColumns = @JoinColumn(name = "students_id"),
     inverseJoinColumns = @JoinColumn(name = "lectures_id"))
     private List<LectureEntity> lectures;

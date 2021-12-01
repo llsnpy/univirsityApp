@@ -17,7 +17,7 @@ import java.util.List;
 public class LectureEntity implements Serializable {
 
     @Id
-    @GeneratedValue(generator = "generator0")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column
